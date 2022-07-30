@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="layui.js";></script>
+<link rel="stylesheet" href="layui.css";>
+<head>
+<meta charset="UTF-8">
+<title>函数网盘</title>
+<!--网页标题左侧显示-->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!--收藏夹显示图标-->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<script language=JavaScript>
+    function InputCheck()
+    {
+        if (Login.username.value == "")
+            {
+             alert("请输入用户名!");
+             Login.username.focus();
+             return (false);
+             }
+        if (Login.password.value == "")
+             {
+               alert("请输入密码!");
+               Login.password.focus();
+            return (false);
+             }
+        }
+</script>
+<body style="background: pink">
+<div style="position: absolute; left: 50%; top: 50%;width: 500px; margin-left:-250px; margin-top: -200px">
+    <div style="background: #FFFFFF; padding: 20px;border-radius: 20px;box-shadow: 5px 5px 20px #444444" >
+        <div class="layui-form">
+            <form action="login.php" method="post" name="Login" οnsubmit="return InputCheck()">
+                <div class="layui-form-item" style="color: gray">
+                    <h2>函数网盘</h2>
+                </div>
+                <hr>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="username" id="username" placeholder="用户名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密    码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="password" id="password" placeholder="密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block";>
+                        <input type="submit" value="登录" class="layui-btn">
+                        <input type="button" value="注册" class="layui-btn" onclick='window.location.href="register.html"'>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
